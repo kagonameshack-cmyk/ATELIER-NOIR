@@ -85,3 +85,42 @@ mobileLinks.forEach(link => {
     });
 
 });
+
+
+/* CUSTOM CURSOR */
+
+const cursor =
+document.querySelector(".cursor");
+
+window.addEventListener("mousemove", (e) => {
+
+    cursor.style.left =
+    e.clientX + "px";
+
+    cursor.style.top =
+    e.clientY + "px";
+
+});
+
+/* HOVER EFFECTS */
+
+const hoverElements =
+document.querySelectorAll(
+"a, .project-card, .hero-btn"
+);
+
+hoverElements.forEach(el => {
+
+    el.addEventListener("mouseenter", () => {
+
+        cursor.classList.add("active");
+
+    });
+
+    el.addEventListener("mouseleave", () => {
+
+        cursor.classList.remove("active");
+
+    });
+
+});
