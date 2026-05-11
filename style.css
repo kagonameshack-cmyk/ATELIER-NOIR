@@ -520,6 +520,13 @@ footer a{
         background-attachment:scroll;
     }
 
+    .menu-toggle{
+    display:flex;
+    }
+
+    .nav-links{
+    display:none;
+    }
 }
 
 @media(max-width:600px){
