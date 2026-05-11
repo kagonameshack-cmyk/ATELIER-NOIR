@@ -1,1 +1,474 @@
+/* RESET */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0A0A0A;
+    color:#F5F1E8;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:28px 8%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:1000;
+
+    transition:0.4s ease;
+}
+
+nav.scrolled{
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(20px);
+}
+
+.logo{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.5rem;
+    letter-spacing:4px;
+    color:#B89B72;
+}
+
+.nav-links{
+    display:flex;
+    gap:45px;
+}
+
+.nav-links a{
+    color:#F5F1E8;
+    text-decoration:none;
+
+    font-size:0.9rem;
+    letter-spacing:2px;
+
+    transition:0.4s ease;
+}
+
+.nav-links a:hover{
+    color:#B89B72;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+
+    height:100vh;
+
+    background:url('images/hero.jpg');
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 8%;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.82)
+    );
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    max-width:900px;
+}
+
+.hero-line{
+    width:120px;
+    height:1px;
+
+    background:#B89B72;
+
+    margin-bottom:35px;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:6.5rem;
+    font-weight:300;
+    line-height:1;
+
+    letter-spacing:2px;
+
+    margin-bottom:35px;
+}
+
+.hero p{
+    color:#CFCFCF;
+
+    max-width:650px;
+
+    line-height:2;
+
+    font-size:1rem;
+}
+
+.hero-btn{
+    display:inline-block;
+
+    margin-top:45px;
+
+    padding:18px 42px;
+
+    border:1px solid #B89B72;
+
+    color:#F5F1E8;
+    text-decoration:none;
+
+    letter-spacing:3px;
+    font-size:0.8rem;
+
+    transition:0.5s ease;
+}
+
+.hero-btn:hover{
+    background:#B89B72;
+    color:#0A0A0A;
+}
+
+/* PHILOSOPHY */
+
+.philosophy{
+    padding:180px 8%;
+}
+
+.philosophy-content{
+    max-width:1100px;
+}
+
+.philosophy h2{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:5rem;
+    font-weight:300;
+
+    line-height:1.2;
+
+    color:#F5F1E8;
+}
+
+/* PROJECTS */
+
+.projects{
+    padding:0 8% 180px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+}
+
+.project-card{
+    position:relative;
+
+    height:550px;
+
+    overflow:hidden;
+
+    background:#111;
+    cursor:pointer;
+}
+
+.project-card img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1.2s ease;
+}
+
+.project-card:hover img{
+    transform:scale(1.08);
+}
+
+.project-info{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,0.88),
+        rgba(0,0,0,0.05)
+    );
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:40px;
+}
+
+.project-info h3{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.2rem;
+    font-weight:300;
+
+    letter-spacing:1px;
+}
+
+/* PARALLAX */
+
+.parallax{
+    position:relative;
+
+    height:90vh;
+
+    background:url('images/parallax.jpg');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+}
+
+.parallax-content{
+    position:relative;
+    z-index:2;
+}
+
+.parallax-content h2{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:6rem;
+    font-weight:300;
+
+    line-height:1.1;
+}
+
+/* PROCESS */
+
+.process{
+    padding:180px 8%;
+}
+
+.process-header{
+    margin-bottom:90px;
+}
+
+.process-header h2{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:5rem;
+    font-weight:300;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:40px;
+}
+
+.process-item{
+    border-top:1px solid rgba(255,255,255,0.08);
+
+    padding-top:30px;
+}
+
+.process-item span{
+    color:#B89B72;
+
+    font-size:0.9rem;
+    letter-spacing:3px;
+}
+
+.process-item h3{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.2rem;
+    font-weight:300;
+
+    margin-top:20px;
+}
+
+/* CONTACT */
+
+.contact{
+    padding:180px 8%;
+
+    background:#111111;
+
+    text-align:center;
+}
+
+.contact h2{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:5rem;
+    font-weight:300;
+
+    margin-bottom:30px;
+}
+
+.contact p{
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:2;
+
+    color:#A8A8A8;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px 8%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+footer p{
+    color:#777;
+
+    font-size:0.9rem;
+
+    letter-spacing:1px;
+}
+
+footer a{
+    color:#B89B72;
+    text-decoration:none;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:4.5rem;
+    }
+
+    .philosophy h2{
+        font-size:3.8rem;
+    }
+
+    .parallax-content h2{
+        font-size:4rem;
+    }
+
+    .process-header h2{
+        font-size:3.8rem;
+    }
+
+    .contact h2{
+        font-size:3.8rem;
+    }
+
+    .parallax{
+        background-attachment:scroll;
+    }
+
+}
+
+@media(max-width:600px){
+
+    nav{
+        padding:24px 6%;
+    }
+
+    .hero{
+        padding:0 6%;
+    }
+
+    .hero h1{
+        font-size:3.2rem;
+        line-height:1.1;
+    }
+
+    .hero p{
+        font-size:0.95rem;
+        line-height:1.8;
+    }
+
+    .hero-btn{
+        padding:16px 32px;
+    }
+
+    .philosophy{
+        padding:140px 7%;
+    }
+
+    .philosophy h2{
+        font-size:3rem;
+    }
+
+    .projects{
+        padding:0 7% 140px;
+    }
+
+    .project-card{
+        height:420px;
+    }
+
+    .parallax{
+        height:70vh;
+    }
+
+    .parallax-content h2{
+        font-size:2.8rem;
+    }
+
+    .process{
+        padding:140px 7%;
+    }
+
+    .process-header h2{
+        font-size:3rem;
+    }
+
+    .contact{
+        padding:140px 7%;
+    }
+
+    .contact h2{
+        font-size:3rem;
+    }
+
+      }
