@@ -24,3 +24,52 @@ window.addEventListener("scroll", () => {
     });
 
 });
+
+
+/* LIGHTBOX */
+
+const lightbox =
+document.getElementById("lightbox");
+
+const lightboxImg =
+document.getElementById("lightbox-img");
+
+const galleryImages =
+document.querySelectorAll(".grid-item img");
+
+const closeLightbox =
+document.querySelector(".close-lightbox");
+
+/* OPEN */
+
+galleryImages.forEach(img => {
+
+    img.addEventListener("click", () => {
+
+        lightbox.classList.add("active");
+
+        lightboxImg.src = img.src;
+
+    });
+
+});
+
+/* CLOSE BUTTON */
+
+closeLightbox.addEventListener("click", () => {
+
+    lightbox.classList.remove("active");
+
+});
+
+/* CLOSE WHEN CLICKING OUTSIDE */
+
+lightbox.addEventListener("click", (e) => {
+
+    if(e.target !== lightboxImg){
+
+        lightbox.classList.remove("active");
+
+    }
+
+});
