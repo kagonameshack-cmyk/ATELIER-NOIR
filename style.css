@@ -347,6 +347,9 @@ nav.scrolled{
 
     background:#111;
     cursor:pointer;
+
+    text-decoration:none;
+    color:#F5F1E8;
 }
 
 .project-card img{
@@ -386,8 +389,6 @@ nav.scrolled{
     font-weight:300;
 
     letter-spacing:1px;
-
-    color:#F5F1E8;
 }
 
 /* PARALLAX */
