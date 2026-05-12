@@ -782,3 +782,33 @@ body{
     }
 
 }
+
+/* CUSTOM SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0A0A0A;
+}
+
+::-webkit-scrollbar-thumb{
+    background:
+    linear-gradient(
+        to bottom,
+        #6F5A3D,
+        #B89B72
+    );
+
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:
+    linear-gradient(
+        to bottom,
+        #8A6D47,
+        #D7B98C
+    );
+}
