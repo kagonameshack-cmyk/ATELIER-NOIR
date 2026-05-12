@@ -1,0 +1,314 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0A0A0A;
+    color:#F5F1E8;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+/* HERO */
+
+.project-hero{
+    position:relative;
+
+    height:100vh;
+
+    background:url('images/hero.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 8%;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.82)
+    );
+}
+
+.project-content{
+    position:relative;
+    z-index:2;
+}
+
+.project-content p{
+    letter-spacing:4px;
+
+    color:#B89B72;
+
+    margin-bottom:25px;
+}
+
+.project-content h1{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:7rem;
+    font-weight:300;
+
+    line-height:1;
+}
+
+/* INTRO */
+
+.project-intro{
+    padding:180px 8%;
+
+    display:grid;
+    grid-template-columns:1.2fr 0.8fr;
+
+    gap:80px;
+
+    align-items:start;
+}
+
+.intro-left h2{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:4.5rem;
+    font-weight:300;
+
+    line-height:1.2;
+}
+
+.intro-right p{
+    color:#A8A8A8;
+
+    line-height:2;
+
+    font-size:1rem;
+}
+
+/* IMAGE GRID */
+
+.image-grid{
+    padding:0 8% 180px;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+}
+
+.grid-item{
+    overflow:hidden;
+
+    background:#111;
+}
+
+.grid-item.large{
+    grid-column:span 2;
+
+    height:700px;
+}
+
+.grid-item:not(.large){
+    height:500px;
+}
+
+.grid-item img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1.2s ease;
+}
+
+.grid-item:hover img{
+    transform:scale(1.05);
+}
+
+/* STATEMENT */
+
+.statement{
+    position:relative;
+
+    height:90vh;
+
+    background:url('images/parallax.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+}
+
+.statement-content{
+    position:relative;
+    z-index:2;
+}
+
+.statement-content h2{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:6rem;
+    font-weight:300;
+
+    line-height:1.1;
+}
+
+/* DETAILS */
+
+.details{
+    padding:180px 8%;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:50px;
+}
+
+.detail{
+    border-top:
+    1px solid rgba(255,255,255,0.08);
+
+    padding-top:30px;
+}
+
+.detail span{
+    color:#B89B72;
+
+    letter-spacing:3px;
+
+    font-size:0.8rem;
+}
+
+.detail h3{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.2rem;
+    font-weight:300;
+
+    margin-top:20px;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px 8%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    border-top:
+    1px solid rgba(255,255,255,0.06);
+}
+
+footer p{
+    color:#777;
+
+    font-size:0.9rem;
+
+    letter-spacing:1px;
+}
+
+footer a{
+    color:#B89B72;
+
+    text-decoration:none;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .project-content h1{
+        font-size:5rem;
+    }
+
+    .project-intro{
+        grid-template-columns:1fr;
+    }
+
+    .intro-left h2{
+        font-size:3.8rem;
+    }
+
+    .statement{
+        background-attachment:scroll;
+    }
+
+    .statement-content h2{
+        font-size:4rem;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .project-hero{
+        padding:0 6%;
+    }
+
+    .project-content h1{
+        font-size:3.5rem;
+    }
+
+    .project-intro{
+        padding:140px 7%;
+    }
+
+    .intro-left h2{
+        font-size:3rem;
+    }
+
+    .image-grid{
+        padding:0 7% 140px;
+
+        grid-template-columns:1fr;
+    }
+
+    .grid-item.large{
+        grid-column:span 1;
+
+        height:420px;
+    }
+
+    .grid-item:not(.large){
+        height:420px;
+    }
+
+    .statement{
+        height:70vh;
+    }
+
+    .statement-content h2{
+        font-size:2.8rem;
+    }
+
+    .details{
+        padding:140px 7%;
+    }
+
+  }
