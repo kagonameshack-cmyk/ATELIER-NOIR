@@ -1,0 +1,206 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0A0A0A;
+    color:#F5F1E8;
+
+    font-family:'Inter',sans-serif;
+}
+
+/* HERO */
+
+.consultation-hero{
+    position:relative;
+
+    height:85vh;
+
+    background:url('images/consultation-hero.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 8%;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.82)
+    );
+}
+
+.consultation-content{
+    position:relative;
+    z-index:2;
+}
+
+.consultation-content p{
+    color:#B89B72;
+
+    letter-spacing:4px;
+
+    margin-bottom:25px;
+}
+
+.consultation-content h1{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:6rem;
+    font-weight:300;
+
+    line-height:1;
+}
+
+/* FORM SECTION */
+
+.consultation-form-section{
+    padding:160px 8%;
+}
+
+.form-intro{
+    max-width:850px;
+
+    margin-bottom:80px;
+}
+
+.form-intro h2{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:4.5rem;
+    font-weight:300;
+
+    margin-bottom:30px;
+}
+
+.form-intro p{
+    color:#A8A8A8;
+
+    line-height:2;
+
+    max-width:650px;
+}
+
+/* FORM */
+
+form{
+    max-width:900px;
+}
+
+.input-group{
+    margin-bottom:35px;
+}
+
+.input-group input,
+.input-group textarea{
+    width:100%;
+
+    background:transparent;
+
+    border:none;
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.12);
+
+    padding:22px 0;
+
+    color:#F5F1E8;
+
+    font-size:1rem;
+
+    font-family:'Inter',sans-serif;
+
+    outline:none;
+
+    transition:0.5s ease;
+}
+
+.input-group textarea{
+    height:160px;
+
+    resize:none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+    border-color:#B89B72;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder{
+    color:#777;
+}
+
+/* BUTTON */
+
+button{
+    margin-top:25px;
+
+    padding:18px 40px;
+
+    background:transparent;
+
+    border:
+    1px solid #B89B72;
+
+    color:#F5F1E8;
+
+    letter-spacing:3px;
+
+    cursor:pointer;
+
+    transition:0.5s ease;
+}
+
+button:hover{
+    background:#B89B72;
+
+    color:#0A0A0A;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .consultation-content h1{
+        font-size:4.5rem;
+    }
+
+    .form-intro h2{
+        font-size:3.8rem;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .consultation-hero{
+        padding:0 6%;
+    }
+
+    .consultation-content h1{
+        font-size:3.2rem;
+    }
+
+    .consultation-form-section{
+        padding:120px 7%;
+    }
+
+    .form-intro h2{
+        font-size:3rem;
+    }
+
+             }
