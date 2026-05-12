@@ -1,0 +1,133 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0A0A0A;
+
+    color:#F5F1E8;
+
+    font-family:'Inter',sans-serif;
+
+    overflow:hidden;
+}
+
+/* SUCCESS PAGE */
+
+.success-page{
+    position:relative;
+
+    height:100vh;
+
+    background:url('images/success-hero.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:0 8%;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.60),
+        rgba(0,0,0,0.82)
+    );
+}
+
+.success-content{
+    position:relative;
+    z-index:2;
+
+    max-width:900px;
+}
+
+.success-content p{
+    color:#B89B72;
+
+    letter-spacing:4px;
+
+    margin-bottom:30px;
+}
+
+.success-content h1{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:5.8rem;
+    font-weight:300;
+
+    line-height:1.1;
+
+    margin-bottom:30px;
+}
+
+.success-content span{
+    display:block;
+
+    color:#BDBDBD;
+
+    line-height:2;
+
+    margin-bottom:50px;
+}
+
+/* BUTTON */
+
+.success-content a{
+    display:inline-block;
+
+    padding:18px 42px;
+
+    border:
+    1px solid #B89B72;
+
+    color:#F5F1E8;
+
+    text-decoration:none;
+
+    letter-spacing:3px;
+
+    transition:0.5s ease;
+}
+
+.success-content a:hover{
+    background:#B89B72;
+
+    color:#0A0A0A;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .success-content h1{
+        font-size:4.5rem;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .success-page{
+        padding:0 7%;
+    }
+
+    .success-content h1{
+        font-size:3rem;
+    }
+
+             }
